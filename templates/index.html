@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Hotel Estadia</title>
+
+</head>
+<body>
+    <header>
+        <h1>Hotel Estadia</h1>
+    </header>
+    <nav>
+        <a href="#hospedes">Hóspedes</a>
+        <a href="#quartos">Quartos</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#usuarios">Usuários</a>
+        <a href="#perfil">Perfil</a>
+    </nav>
+    <main>
+        <section id="hospedes">
+            <h2>Hóspedes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>(11) 99999-1234</td>
+                        <td>joao@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>(21) 98888-5678</td>
+                        <td>maria@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="quartos">
+            <h2>Quartos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Tipo</th>
+                        <th>Preço por Noite</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Solteiro</td>
+                        <td>R$ 150,00</td>
+                        <td>Disponível</td>
+                    </tr>
+                    <tr>
+                        <td>202</td>
+                        <td>Casal</td>
+                        <td>R$ 250,00</td>
+                        <td>Ocupado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <form>
+                <label for="hospede">Hóspede:</label>
+                <input type="text" id="hospede" name="hospede" placeholder="Nome do hóspede" />
+
+                <label for="quarto">Quarto:</label>
+                <select id="quarto" name="quarto">
+                    <option value="101">101 - Solteiro</opti/* Form styling */on>
+                    <option value="202">202 - Casal</option>
+                </select>
+
+                <label for="checkin">Check-in:</label>
+                <input type="date" id="checkin" name="checki/* Form styling */n" />
+
+                <label for="checkout">Check-out:</label>
+                <input type="date" id="checkout" name="checkout" />
+
+                <button type="submit">Fazer Reserva</button>
+            </form>
+        </section>
+
+        <section id="usuarios">
+            <h2>Usuários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Função</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>admin</td>
+                        <td>Administrador</td>
+                        <td>admin@hotel.com</td>
+                    </tr>
+                    <tr>
+                        <td>recep1</td>
+                        <td>Recepcionista</td>
+                        <td>recep1@hotel.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="perfil">
+            <h2>Perfil do Usuário</h2>
+            <form>
+                <label for="nomeUser">Nome:</label>
+                <input type="text" id="nomeUser" name="nomeUser" value="Admin" />
+
+                <label for="emailUser">Email:</label>
+                <input type="email" id="emailUser" name="emailUser" value="admin@hotel.com" />
+
+                <label for="senhaUser">Senha:</label>
+                <input type="password" id="senhaUser" name="senhaUser" />
+
+                <button type="submit">Atualizar Perfil</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
